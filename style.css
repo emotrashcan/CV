@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e9f9; 
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #6a5acd; 
+    padding: 20px;
+    text-align: center;
+    color: white; 
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #5e4b8a; 
+    border-bottom: 2px solid #6a5acd; 
+    padding-bottom: 5px;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: #6a5acd; 
+    color: white; 
+    padding: 10px 0; 
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marquee 10s linear infinite; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.section {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: white; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;  
+    transform: translateY(20px);  
+    animation: fadeIn 0.5s forwards; 
+    animation-delay: 0.2s;  
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.section:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s;  
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6a5acd; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#scrollToTop:hover {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
